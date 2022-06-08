@@ -1,0 +1,18 @@
+---
+action:
+  to: kubernetes/service.yaml
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: {{artifact-id}}
+  name: {{artifact-id}}-service
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/name: {{artifact-id}}
+  sessionAffinity: None
+  type: LoadBalancer
