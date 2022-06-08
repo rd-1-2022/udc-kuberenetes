@@ -1,6 +1,6 @@
 ---
 action:
-  to: kubernetes/service.yaml
+  generate: kubernetes/service.yaml
 ---
 apiVersion: v1
 kind: Service
