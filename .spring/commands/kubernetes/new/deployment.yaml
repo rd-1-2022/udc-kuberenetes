@@ -1,6 +1,6 @@
 ---
-actions:
-  to: kubernetes/deployment.yaml
+action:
+  generate: kubernetes/deployment.yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
